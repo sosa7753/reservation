@@ -1,7 +1,8 @@
 package zerobase.reservation.type;
 
-public enum Partner {
+// 로그인 유저 권한
+public enum UserType {
 
-    MANAGER,
-    CLIENT;
+    ROLE_ADMIN,
+    ROLE_CLIENT;
 }

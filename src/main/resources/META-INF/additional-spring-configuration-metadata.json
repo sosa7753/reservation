@@ -1,1 +1,8 @@
-{ "properties": [ ] }
+{
+  "properties": [
+    {
+      "name": "spring.jwt.secret",
+      "type": "java.lang.String",
+      "description": "Description for spring.jwt.secret."
+  }
+] }

@@ -1,7 +1,9 @@
-package dto;
+package zerobase.reservation.dto;
 
 
 import lombok.Data;
+import zerobase.reservation.domain.MemberEntity;
+import zerobase.reservation.type.UserType;
 
 import java.util.List;
 
@@ -18,14 +20,18 @@ public class Auth {
     public static class SignUp {
         private String username;
         private String password;
-        private List<String> roles; // 역할
 
-//        public MemberEntity toEntity() {
-//            return MemberEntity.builder()
-//                    .username(this.username)
-//                    .password(this.password)
-//                    .roles(this.roles)
-//                    .build();
-//        }
+        private UserType userType;
+
+        private List<String> roles; // 행동 역할
+
+        public MemberEntity toEntity() {
+            return MemberEntity.builder()
+                    .username(this.username)
+                    .password(this.password)
+                    .userType(this.userType)
+                    .roles(this.roles)
+                    .build();
+        }
     }
 }
